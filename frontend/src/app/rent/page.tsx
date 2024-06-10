@@ -87,6 +87,7 @@ if (loading) {
         <h2 className="text-xl font-semibold text-[#C4FF0D]">Tus alquileres Recientes</h2>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <SaleCard
+          
             carModel="Toyota Corolla 2021"
             saleDate="01/06/2024"
             price="$20,000"
@@ -108,6 +109,7 @@ if (loading) {
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {userData?.post.map((rent) => (
           <ListedCarCard
+          key={rent.id}
           carModel={rent.title}
           price={rent.price}
           imageUrl={rent.car?.image_url[0]}
