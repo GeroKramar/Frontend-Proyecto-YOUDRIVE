@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Loader from "@/components/Loaders/loaderAuth";
 
-const Auth: React.FC = () => {
+const AuthContent: React.FC = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [loading, setLoading] = useState(true);
@@ -37,6 +37,14 @@ const Auth: React.FC = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+const Auth: React.FC = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AuthContent />
+    </Suspense>
   );
 };
 
