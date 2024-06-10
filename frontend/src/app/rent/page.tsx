@@ -87,13 +87,14 @@ if (loading) {
         <h2 className="text-xl font-semibold text-[#C4FF0D]">Tus alquileres Recientes</h2>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <SaleCard
-          
+          key="1"         
             carModel="Toyota Corolla 2021"
             saleDate="01/06/2024"
             price="$20,000"
             imageUrl="https://via.placeholder.com/150"
           />
           <SaleCard
+          key="2"  
             carModel="Honda Civic 2020"
             saleDate="15/05/2024"
             price="$18,000"
@@ -126,16 +127,19 @@ if (loading) {
         <h2 className="text-xl font-semibold text-[#C4FF0D]">Estadísticas de Ventas</h2>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <StatCard
+          key="3"  
             title="Alquileres Totales"
             value="120"
             description="Total de Alquileres recibidos en la plataforma"
           />
           <StatCard
+          key="4"  
             title="Ingresos"
             value="$240,000"
             description="Ingresos generados"
           />
           <StatCard
+          key="5"  
             title="Promedio de Precio"
             value="$20,000"
             description="Precio promedio de los vehículos alquilados"
